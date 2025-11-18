@@ -11,8 +11,6 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#endif
-
 typedef struct coro_t coro_t;
 typedef struct coro_sched_t coro_sched_t;
 typedef void (*coro_fn_t)(void *arg);
@@ -138,11 +136,7 @@ void cor_notify_all(cor_wait_token_t token);
 const char *coro_state_name(coro_t *c); /* "READY"/"RUNNING"/"WAITING"/"FINISHED" */
 void coro_dump_stats(coro_sched_t *sched); /* print statistics to stderr */
 
-}
-#endif
-
 #endif /* COROUTINE_POOL_H */
-
 ```
 
 
